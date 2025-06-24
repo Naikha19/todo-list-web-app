@@ -6,6 +6,9 @@ submitBtn.addEventListener("click",addTasks);
 
 function addTasks(event){
     event.preventDefault();
+    if (inputBox.value.trim() === ""){
+        return;
+    }
 
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo-Items")
